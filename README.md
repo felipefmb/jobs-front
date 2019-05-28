@@ -11,12 +11,12 @@ Faça um fork deste repositório e suba seu código nele. Depois abra um pull-re
 
 ## TESTE
 
-### Mostrar os álbuns da rota:
+Mostrar os álbuns da rota:
 https://jsonplaceholder.typicode.com/albums
 
-### Mostrar 1 miniatura por álbum que vai ser a primeira foto de dentro do álbum
+Mostrar 1 miniatura por álbum que vai ser a primeira foto de dentro do álbum
 
-### Mostrar as 100 primeiras fotos de cada álbum
+Mostrar as 100 primeiras fotos de cada álbum
 https://jsonplaceholder.typicode.com/photos
 
 ## PRAZO
