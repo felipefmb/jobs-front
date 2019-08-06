@@ -16,7 +16,7 @@ https://jsonplaceholder.typicode.com/albums
 
 Mostrar 1 miniatura por álbum que vai ser a primeira foto de dentro do álbum
 
-Mostrar as 100 primeiras fotos de cada álbum
+Ao clicar no álbul, mostrar as 100 primeiras fotos de cada álbum
 https://jsonplaceholder.typicode.com/photos
 
 ## PRAZO
