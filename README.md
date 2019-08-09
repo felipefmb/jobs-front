@@ -1,27 +1,26 @@
-# FotoManager
+# Simples Dental - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+## OBJETIVO
 
-## Development server
+Desenvolva um front que consuma uma API REST
+O front deve ser desenvolvido usando as boas práticas da [Angular](https://angular.io/), utilizando a biblioteca de componentes do [Angular Material](https://material.angular.io/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## ENTREGA
 
-## Code scaffolding
+Faça um fork deste repositório e suba seu código nele. Depois abra um pull-request.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## TESTE
 
-## Build
+Mostrar os álbuns da rota:
+https://jsonplaceholder.typicode.com/albums
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Mostrar 1 miniatura por álbum que vai ser a primeira foto de dentro do álbum
 
-## Running unit tests
+Ao clicar no álbul, mostrar as 100 primeiras fotos de cada álbum
+https://jsonplaceholder.typicode.com/photos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## PRAZO
 
-## Running end-to-end tests
+O commit deve ser feito preferencialmente em até 48 horas após receber o link desse repositório por e-mail.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Obrigado e bom divertimento 💪💪.
