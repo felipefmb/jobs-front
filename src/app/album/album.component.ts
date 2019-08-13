@@ -18,7 +18,7 @@ export class AlbumComponent implements OnInit {
   }
 
   getAlbuns(): void {
-    this.albumService.getAlbuns()
+    this.albumService.findAll()
     .subscribe(album => this.albuns = album);
   }
 

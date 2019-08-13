@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { Album } from '../album/album';
 import  { FotoService } from './foto.service';
-import  { AlbumService } from '../album/album.service';
 import { Foto } from './foto';
 
 
@@ -15,6 +13,7 @@ import { Foto } from './foto';
 export class FotoComponent implements OnInit {
 
   fotos: Foto[] = [];
+  value: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,19 +23,17 @@ export class FotoComponent implements OnInit {
 
   ngOnInit() {
     const idAlbum = +this.route.snapshot.paramMap.get('id');
-    this.findFotosByIdAlbum(idAlbum);
+    this.findByIdAlbum(idAlbum);
+    
   }
 
   goBack() {
     this.location.back();
   }
-
-  findFotosByIdAlbum(idAlbum: number): void {
-    this.fotoService.findFotosByIdAlbum(idAlbum)
-    .subscribe(fotos => {
-      console.log(fotos);
-      this.fotos = fotos;
-    });
+  
+  findByIdAlbum(idAlbum: number) {
+    this.fotoService.findByIdAlbum(idAlbum).subscribe(fotos => this.value = JSON.stringify(fotos));
   }
+
 
 }

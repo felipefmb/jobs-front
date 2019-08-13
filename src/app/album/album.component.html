@@ -1,8 +1,8 @@
 <h3>Albuns</h3>
 <ul>
     <li *ngFor="let album of albuns">
-        <a routerLink="/{{album.getId()}}/fotos">
-            <span class="badge">{{album.getId()}}</span> {{album.getName()}}
+        <a routerLink="/{{album.id}}/fotos">
+            <span class="badge">{{album.id}}</span>{{album.title}}
         </a>
     </li>
 </ul>

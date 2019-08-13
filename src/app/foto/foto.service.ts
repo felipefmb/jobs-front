@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
-import FOTOS from './mock-fotos';
-import { Observable, of } from 'rxjs';
 import { Foto } from './foto';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { AbstractService } from '../abstract/abstract.service';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FotoService {
+export class FotoService extends AbstractService<Foto> {
+  
+  urlAlbuns: string = "/albums";
 
-  constructor() { }
+  constructor(http: HttpClient) {
+    super("photos", http);    
+   }
 
-  findFotosById(idFoto: number): Observable<Foto> {
-    return of(FOTOS.find(foto => foto.getId() === idFoto));
-  }
-
-  findFotosByIdAlbum(idAlbum: number): Observable<Foto[]> {
-    console.log(FOTOS);
-    return of(FOTOS.filter(foto => foto.getAlbum().getId() === idAlbum));
+  public findByIdAlbum(idAlbum: number): Observable<Foto[]> {
+    let params = new HttpParams().set('idAlbum', idAlbum.toString());
+    return this.http.get<Foto[]>(`${this.URL}`, {params: params });
   }
 
 }

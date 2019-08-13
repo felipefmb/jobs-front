@@ -3,35 +3,37 @@ import { Foto } from '../foto/foto';
 export class Album {
 
     private id: number;
-    private name: string;
-    private fotos: Foto[] = [];
+    private userId: number;
+    private title: string;
 
-    constructor(id: number, name: string) {
+    constructor(id: number, userId: number, title: string) {
         this.setId(id);
-        this.setName(name);
+        this.setUserId(userId);
+        this.setTitle(title);
     }
 
-    getId() {
-        return this.id;
-    }
-
-    setId(id: number) {
+    public setId(id: number) {
         this.id = id;
     }
 
-    getName() {
-        return this.name;
-    }
-    setName(name: string) {
-        this.name = name;
+    public setUserId(userId: number) {
+        this.userId = userId;
     }
 
-    getFotos() {
-        return this.fotos;
+    public setTitle(title: string) {
+        this.title = title;
+    }
+
+    public getId() {
+        return this.id;
+    }
+
+    public getUserId() {
+        return this.userId;
+    }
+
+    public getTitle() {
+        return this.title;
     }
     
-    setFotos(fotos: Foto[]) {
-        this.fotos = fotos;
-    }
-
 }
