@@ -1,8 +1,10 @@
 <h3>Albuns</h3>
 <ul>
-    <li *ngFor="let album of albuns">
-        <a routerLink="/{{album.id}}/fotos">
-            <span class="badge">{{album.id}}</span>{{album.title}}
-        </a>
-    </li>
-</ul>
+        <li *ngFor="let album of albuns">
+            <a routerLink="/albuns/{{album.id}}/fotos">
+                <span class="badge">{{album.id}}</span>{{album.title}}
+            </a>
+        </li>
+    </ul>
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>

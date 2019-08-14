@@ -13,7 +13,6 @@ import { Foto } from './foto';
 export class FotoComponent implements OnInit {
 
   fotos: Foto[] = [];
-  value: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,7 +31,7 @@ export class FotoComponent implements OnInit {
   }
   
   findByIdAlbum(idAlbum: number) {
-    this.fotoService.findByIdAlbum(idAlbum).subscribe(fotos => this.value = JSON.stringify(fotos));
+    this.fotoService.findByIdAlbum(idAlbum).subscribe(fotos => this.fotos = fotos);
   }
 
 

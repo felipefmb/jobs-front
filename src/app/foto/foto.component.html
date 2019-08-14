@@ -1,2 +1,16 @@
-<div>{{value}}</div>
-<button (click)="goBack()">Voltar</button>
+<h3>Fotos</h3>
+<button mat-raised-button (click)="goBack()">Voltar</button>
+<div>
+    <ul *ngFor="let foto of fotos">
+        <li>
+            <span class="badge">{{foto.id}}</span>
+            <span class="badge">{{foto.albumId}}</span>
+            <span class="badge">{{foto.title}}</span>
+            <span>{{foto.url}}</span>
+            <span *ngIf="foto.thumbnailUrl" class="badge">
+                {{foto.thumbnailUrl}}
+                <!--<img src="foto.thumbnailUrl" alt="Não encontrada">-->
+            </span>
+        </li>
+    </ul>
+</div>
